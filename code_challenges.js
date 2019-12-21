@@ -12,13 +12,17 @@
 
 
 
+// 21/12/19 //
+	function getMiddle(s){
+		let stringFloor = Math.floor(s.length/2)
+		return s.length%2 ? s[stringFloor]  : s[stringFloor-1] +s[stringFloor]
+	}
 
 
 // 20/12/19 //
 	function colorOf(r,g,b){
 		const hex = d => Number(d).toString(16).padStart(2, '0')
 	  	return "#" + hex(r) + hex(g) + hex(b)
-	  
 	}
 
 
