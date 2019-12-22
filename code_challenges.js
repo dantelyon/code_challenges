@@ -3,13 +3,14 @@
 
 
 
-
-
-
-
-
-
-
+// 22/12/19 //
+function highAndLow(numbers){
+	let orderedNumbers = numbers.split(" ").map(Number).sort((a, b) => a - b);
+	return `${orderedNumbers[orderedNumbers.length -1]} ${orderedNumbers[0]}`
+} 
+	/** Two lessons learned:
+		a) by default the sort method sorts alphabetically, and so to sort numerically a compare function is needed.
+		b) could've just skipped sorting the array, and just used Math.max and Math.min **/
 
 
 // 21/12/19 //
@@ -47,7 +48,7 @@
 			arr = arr.sort((a, b) => a - b);
 			var middle = arr[Math.floor(arr.length / 2)];
 			var middle2 = arr[Math.floor((arr.length - 1) / 2)];
-			if (arr.length%2==false){
+			if (arr.length%2==false){ //yikes
 				return (middle + middle2) / 2
 			}else{
 				return middle
