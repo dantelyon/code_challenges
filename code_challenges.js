@@ -4,10 +4,20 @@
 
 
 // 22/12/19 //
-function highAndLow(numbers){
-	let orderedNumbers = numbers.split(" ").map(Number).sort((a, b) => a - b);
-	return `${orderedNumbers[orderedNumbers.length -1]} ${orderedNumbers[0]}`
-} 
+	function disemvowel(str) {
+		let noVowels = ""
+		for(let i=0; i<str.length; i++){
+			if (!str[i].match(/[aeiou]/gi)) noVowels += str[i]
+		};
+		return noVowels
+	}
+
+
+// 22/12/19 //
+	function highAndLow(numbers){
+		let orderedNumbers = numbers.split(" ").map(Number).sort((a, b) => a - b);
+		return `${orderedNumbers[orderedNumbers.length -1]} ${orderedNumbers[0]}`
+	} 
 	/** Two lessons learned:
 		a) by default the sort method sorts alphabetically, and so to sort numerically a compare function is needed.
 		b) could've just skipped sorting the array, and just used Math.max and Math.min **/
