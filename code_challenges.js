@@ -5,6 +5,13 @@
 
 
 // 23/12/19 //
+	function getCount(str) {
+	  var vowelsCount = 0;
+	  [...str].map(char => {if (char.match(/[aeiou]/)) vowelsCount++})
+	  return vowelsCount;
+	}
+
+// 23/12/19 //
 	function squareDigits(num){
 	  return Number(Array.from(String(num), Number).map(n => Math.pow(n, 2)).join(""));
 	}
