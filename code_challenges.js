@@ -3,6 +3,13 @@
 
 
 
+
+// 23/12/19 //
+	function squareDigits(num){
+	  return Number(Array.from(String(num), Number).map(n => Math.pow(n, 2)).join(""));
+	}
+
+
 // 22/12/19 //
 	function disemvowel(str) {
 		let noVowels = ""
