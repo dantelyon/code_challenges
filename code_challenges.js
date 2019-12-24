@@ -4,6 +4,27 @@
 
 
 
+
+// 24/12/19 //
+	let foodQuantity = {
+		"sandwiches" : 4,
+		"salads" : 6,
+		"wraps" : 5,
+		"frenchFries" : 10,
+	}
+	let foodPrices = {
+		"sandwiches" : 8,
+		"salads" : 7,
+		"wraps" : 6.5,
+		"frenchFries" : 1.2,
+	}
+	function totalPrice(quantity, prices){
+		let total = 0
+		const keys = [...Object.keys(quantity)].map(key => total += quantity[key] * prices[key])
+		return total
+	}
+
+
 // 23/12/19 //
 	function dontGiveMeFive(start, end){
 		let count = 0
