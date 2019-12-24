@@ -5,11 +5,22 @@
 
 
 // 23/12/19 //
+	function dontGiveMeFive(start, end){
+		let count = 0
+		for (let i=start; i<end+1; i++){
+			if (!i.toString().match(/[5]/gi)) count++
+		}
+		return count
+	}
+
+
+// 23/12/19 //
 	function getCount(str) {
 	  var vowelsCount = 0;
 	  [...str].map(char => {if (char.match(/[aeiou]/)) vowelsCount++})
 	  return vowelsCount;
 	}
+
 
 // 23/12/19 //
 	function squareDigits(num){
