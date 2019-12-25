@@ -3,6 +3,10 @@
 
 
 
+// 25/12/19 //
+	function findShort(string){
+	  return Math.min(...string.split(" ").map(word => word.length))
+	}
 
 
 // 24/12/19 //
