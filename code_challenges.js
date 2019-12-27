@@ -3,6 +3,13 @@
 
 
 
+
+// 27/12/19 //
+	function descendingOrder(n){
+		return Number( n.toString().split("").sort((a, b)=>{return b-a}).join("") )
+	}
+
+
 // 25/12/19 //
 	function findShort(string){
 	  return Math.min(...string.split(" ").map(word => word.length))
