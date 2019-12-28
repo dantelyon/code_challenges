@@ -4,6 +4,15 @@
 
 
 
+
+// 28/12/19 //
+	function cleanString(s) {
+		let t = []
+		s.split("").forEach(char => char=="#" ? t.pop() : t.push(char))
+		return t.join("")
+	};
+
+
 // 28/12/19 //
 	function solution(number){
 		let sum = 0
