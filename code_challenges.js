@@ -4,6 +4,13 @@
 
 
 
+// 3/1/20 //
+	function positiveSum(arr) {
+		let sum = 0
+		arr.forEach(n => {if (n>0) sum+=n})
+		return sum 
+	}
+
 
 // 28/12/19 //
 	function cleanString(s) {
