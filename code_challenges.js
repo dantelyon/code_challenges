@@ -3,6 +3,17 @@
 
 
 
+// 6/1/29 //
+	function socialistDistribution(pop, minimum){
+		let needs = 0
+		pop.forEach(n => {if (n < minimum) needs += minimum-n})
+		for(let i=0; i<needs; i++){
+			if (Math.max(...pop) <= minimum){pop=[];break}
+			pop[pop.indexOf(Math.max(...pop))] -= 1
+		}
+		return pop.map(n => n<minimum ? n=minimum : n)
+	}
+
 
 // 3/1/20 //
 	function positiveSum(arr) {
