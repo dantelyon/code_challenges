@@ -3,7 +3,19 @@
 
 
 
-// 6/1/29 //
+
+
+// 7/1/20 //
+	function digital_root(n) {
+		let root = Math.abs(n) 
+		while (root > 9){
+			root = root.toString().split("").reduce((a, b) => Number(a) + Number(b), 0)
+		} 
+		return root
+	}
+
+
+// 6/1/20 //
 	function socialistDistribution(pop, minimum){
 		let needs = 0
 		pop.forEach(n => {if (n < minimum) needs += minimum-n})
