@@ -6,6 +6,19 @@
 
 
 // 7/1/20 //
+	function duplicateCount(text){
+	  let duplicates = new Set()
+	  text = text.toLowerCase()
+	  for (let i=0; i < text.length; i++){
+	  	if (text.split(text[i]).length-1 > 1){
+	  		duplicates.add(text[i])
+	  	}
+	  }
+	  return duplicates.size
+	}
+
+
+// 7/1/20 //
 	function digital_root(n) {
 		let root = Math.abs(n) 
 		while (root > 9){
