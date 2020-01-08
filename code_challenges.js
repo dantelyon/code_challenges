@@ -5,6 +5,13 @@
 
 
 
+// 8/1/20 //
+	String.prototype.toJadenCase = function () {
+		let capitalizedWords = this.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1));
+		return capitalizedWords.join(" ")
+	};
+
+
 // 7/1/20 //
 	function duplicateCount(text){
 	  let duplicates = new Set()
