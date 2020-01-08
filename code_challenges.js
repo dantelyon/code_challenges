@@ -6,6 +6,14 @@
 
 
 // 8/1/20 //
+	function getSum(a, b){
+		let sum = 0
+		for (let i=Math.min(a, b); i<=Math.max(a, b); i++) 
+			sum+=i
+		return sum
+	}
+
+// 8/1/20 //
 	String.prototype.toJadenCase = function () {
 		let capitalizedWords = this.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1));
 		return capitalizedWords.join(" ")
