@@ -5,6 +5,18 @@
 
 
 
+// 9/1/20 //
+	function minSum(arr) {
+		arr.sort((a, b) => a - b)
+		let sum = 0
+		for (let n in arr){
+			sum += arr[n] * arr[arr.length-1];
+			arr.pop()
+		}
+		return sum
+	}
+
+
 // 8/1/20 //
 	function getSum(a, b){
 		let sum = 0
