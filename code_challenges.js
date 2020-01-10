@@ -4,6 +4,14 @@
 
 
 
+// 10/1/20 //
+	var subtractProductAndSum = function(n) {
+		const digits = Array.from(n.toString()).map(Number); 
+		let product = digits.reduce((acc, curr) => acc * curr)
+		let sum = digits.reduce((acc, curr) => acc + curr)
+		return product - sum
+	};
+
 
 // 9/1/20 //
 	function minSum(arr) {
