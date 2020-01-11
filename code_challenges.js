@@ -2,6 +2,12 @@
 
 
 
+// 11/1/20 //
+	function spinWords(string){
+		let arr = string.split(" ")
+		let spin = arr.map(word => word.length >= 5 ? word.split("").reverse().join("") : word)
+		return spin.join(" ")
+	}
 
 
 // 10/1/20 //
