@@ -2,6 +2,17 @@
 
 
 
+
+// 13/1/20 //
+	function persistence(num) {
+		for (let sum=1, i=0; ; i++){
+			if (String(num).length === 1) return i;
+			for (let n of String(num)) sum*=n;
+			num=sum; sum=1;
+		}
+	}
+
+
 // 11/1/20 //
 	function spinWords(string){
 		let arr = string.split(" ")
