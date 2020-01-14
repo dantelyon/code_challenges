@@ -3,6 +3,15 @@
 
 
 
+// 14/1/20 //
+	function isValidWalk(walk) {
+		if (walk.length != 10) return false
+		let coords = {"n":0, "s":0, "w":0, "e":0}
+		walk.forEach(c => coords[c]++)
+		return (coords["w"]-coords["e"]==0) && (coords["n"]-coords["s"]==0)
+	}
+
+
 // 13/1/20 //
 	function persistence(num) {
 		for (let sum=1, i=0; ; i++){
