@@ -3,6 +3,19 @@
 
 
 
+// 15/1/20 //
+	function calculateTip(amount, rating) {
+		switch(rating.toLowerCase()) {
+		  case "terrible": return Math.ceil(amount * 0/100)
+		  case "poor": return Math.ceil(amount * 5/100)
+		  case "good": return Math.ceil(amount * 10/100)
+		  case "great": return Math.ceil(amount * 15/100)
+		  case "excellent": return Math.ceil(amount * 20/100)
+		  default: return "Rating not recognised"
+		}
+	}
+
+
 // 14/1/20 //
 	function isValidWalk(walk) {
 		if (walk.length != 10) return false
