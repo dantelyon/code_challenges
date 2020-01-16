@@ -3,6 +3,16 @@
 
 
 
+
+
+// 16/1/20 //
+	function duplicateEncode(word){
+		word = word.toLowerCase().split("")
+		word = word.map(item => word.filter(i => i == item).length > 1 ? ")" : "(" )
+		return word.join("")
+	}
+
+
 // 15/1/20 //
 	function calculateTip(amount, rating) {
 		switch(rating.toLowerCase()) {
