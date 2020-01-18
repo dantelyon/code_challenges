@@ -5,6 +5,13 @@
 
 
 
+
+// 18/1/20 //
+	function songDecoder(song){
+		return song.replace(/WUB/g, " ").replace(/\s+/g, " ").trim()
+	}
+
+
 // 16/1/20 //
 	function duplicateEncode(word){
 		word = word.toLowerCase().split("")
