@@ -6,6 +6,18 @@
 
 
 
+// 22/1/20 //
+	function alphabetPosition(text) {
+		const alphabet = "abcdefghijklmnopqrstuvwxyz"
+		return text
+				.toLowerCase()
+				.split("")
+				.filter(char => alphabet.includes(char))
+				.map(letter => alphabet.indexOf(letter)+1)
+				.join(" ")
+	}
+
+
 // 18/1/20 //
 	function songDecoder(song){
 		return song.replace(/WUB/g, " ").replace(/\s+/g, " ").trim()
