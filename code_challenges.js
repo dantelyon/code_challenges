@@ -6,6 +6,19 @@
 
 
 
+// 27/1/20 //
+	function findNb(m) {
+		let n = 0
+		let total = 0
+		while (total < m){
+			total += n**3;
+			if (total == m) return n;
+			n++;
+		}
+		return -1
+	}
+
+
 // 22/1/20 //
 	function alphabetPosition(text) {
 		const alphabet = "abcdefghijklmnopqrstuvwxyz"
