@@ -6,6 +6,21 @@
 
 
 
+// 29/1/20 //
+	function list(names){
+		names = names.map(n => n.name)
+		switch (names.length) {
+			case 0: return '';
+			case 1: return names[0];
+			case 2: return `${names[0]} & ${names[1]}`;
+		  	default: 
+		  		let names1 = names.slice(0, names.length-2).join(", ");
+		  		let last2Names = `, ${names[names.length-2]} & ${names[names.length-1]}`;
+		  		return names1 + last2Names;
+		}
+	}
+
+
 // 27/1/20 //
 	function findNb(m) {
 		let n = 0
