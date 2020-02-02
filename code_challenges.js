@@ -5,6 +5,16 @@
 
 
 // 2/2/20 //
+	function humanReadable(seconds) {
+		let hours = "0" + parseInt(seconds/3600)
+		seconds -= hours * 3600
+		let minutes = "0" + parseInt(seconds/60)
+		seconds = "0" + (seconds - minutes*60)
+	 	return `${hours.slice(-2)}:${minutes.slice(-2)}:${seconds.slice(-2)}` 
+	}
+
+
+// 2/2/20 //
 	function toCamelCase(str){
 		let camelString = ""
 		for (let i=0; i<str.length; i++){
