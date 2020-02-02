@@ -4,6 +4,16 @@
 
 
 
+// 2/2/20 //
+	function toCamelCase(str){
+		let camelString = ""
+		for (let i=0; i<str.length; i++){
+			if (str[i]=="_" || str[i]=="-"){
+				camelString += str[i+1].toUpperCase(); i++
+			} else camelString += str[i];
+		}
+		return camelString
+	}
 
 
 // 29/1/20 //
