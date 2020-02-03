@@ -4,6 +4,18 @@
 
 
 
+// 3/2/20 //
+	function validParentheses(parens){
+		let forward = 0
+		let backward = 0
+		for (let char of parens){
+			if (backward > forward) return false;
+			char == "(" ? forward++ : backward++
+		}
+		return backward == forward
+	}
+	
+
 // 2/2/20 //
 	function humanReadable(seconds) {
 		let hours = "0" + parseInt(seconds/3600)
