@@ -4,6 +4,14 @@
 
 
 
+// 6/2/20 //
+	var moveZeros = function (arr) {
+		let nozeros = arr.filter(i => i!==0)
+		let zeros = Array(arr.length - nozeros.length).fill(0)
+		return nozeros.concat(zeros)
+	}
+
+
 // 3/2/20 //
 	function validParentheses(parens){
 		let forward = 0
