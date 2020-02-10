@@ -4,6 +4,20 @@
 
 
 
+// Rot13 //
+	function rot13(message){
+		const cipher = (num) => {
+			if (num>=65 && num<=77) return num+13;
+			if (num>=78 && num<=90) return 13-(90-num)+64;
+			if (num>=97 && num<=109) return num+13;
+			if (num>=110 && num<=122) return 13-(122-num)+96;
+			return num
+		}
+		let utfCodes = message.split("").map(char => char.charCodeAt(0))
+		return String.fromCharCode(...utfCodes.map(cipher))
+	}
+
+
 // 6/2/20 //
 	var moveZeros = function (arr) {
 		let nozeros = arr.filter(i => i!==0)
