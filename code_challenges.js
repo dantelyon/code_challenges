@@ -3,6 +3,13 @@
 
 
 
+// Regex validate PIN code //
+	function validatePIN (pin) {
+		let isPINdigits = /^\d+$/.test(pin);
+		let isPIN4or6 = pin.length == 4 || pin.length == 6;
+		return isPINdigits && isPIN4or6
+	}
+
 
 // Rot13 //
 	function rot13(message){
