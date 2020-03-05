@@ -3,6 +3,21 @@
 
 
 
+
+// Calculate Variance //
+	var variance = function(numbers) {
+		let mean = 0
+		numbers.forEach(n => mean += n)
+		mean /= numbers.length
+		
+		let variance = 0
+		numbers.forEach(n => variance += Math.pow(n - mean, 2))
+		variance /= numbers.length
+
+		return variance
+	}
+
+
 // Find the divisors! //
 	function divisors(integer) {
 		let divisors = []
@@ -176,7 +191,7 @@
 		let product = digits.reduce((acc, curr) => acc * curr)
 		let sum = digits.reduce((acc, curr) => acc + curr)
 		return product - sum
-	};
+	}
 
 
 // 9/1/20 //
@@ -203,7 +218,7 @@
 	String.prototype.toJadenCase = function () {
 		let capitalizedWords = this.split(" ").map(s => s.charAt(0).toUpperCase() + s.slice(1));
 		return capitalizedWords.join(" ")
-	};
+	}
 
 
 // 7/1/20 //
@@ -254,7 +269,7 @@
 		let t = []
 		s.split("").forEach(char => char=="#" ? t.pop() : t.push(char))
 		return t.join("")
-	};
+	}
 
 
 // 28/12/19 //
