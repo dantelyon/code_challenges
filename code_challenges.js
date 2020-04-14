@@ -4,6 +4,19 @@
 
 
 
+
+// Find the unique number //
+	function findUniq(arr) {
+		let theEqualNumber
+		if (arr[0] == arr[1] || arr[0] == arr[2]){
+			theEqualNumber = arr[0]
+		} else {theEqualNumber = arr[1]}
+		for (let i=0; i<arr.length; i++){
+			if (theEqualNumber != arr[i]) return arr[i]
+		}
+	}
+
+
 // Calculate Variance //
 	var variance = function(numbers) {
 		let mean = 0
