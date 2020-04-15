@@ -1,8 +1,28 @@
 		
 
 
-
-
+// Vasya - Clerk //
+	function tickets(peopleInLine){
+		let bills25 = 0
+		let bills50 = 0
+		let bills100 = 0
+		for (let i=0; i<peopleInLine.length; i++){
+			let received_bill = peopleInLine[i];
+			if (received_bill==25) {
+				bills25++
+			} else if (received_bill==50 && bills25) {
+				bills25--
+				bills50++
+			} else if (received_bill==100 && bills25 && bills50) {
+				bills25--
+				bills50--
+				bills100++
+			} else if (received_bill==100 && bills25>=3) {
+				bills25-=3;
+				bills100++
+			} else return "NO"
+		} return "YES"
+	}
 
 
 // Find the unique number //
