@@ -1,6 +1,22 @@
 		
 
 
+
+
+
+
+
+// Detect Pangram //
+	function isPangram(string){
+		string = string.toLowerCase()
+		const alphabet = 'abcdefghijklmnopqrstuvwxyz'
+		for (const letter of alphabet){
+			if (!string.includes(letter)) return false
+		}
+		return true
+	}
+
+
 // Vasya - Clerk //
 	function tickets(peopleInLine){
 		let bills25 = 0
