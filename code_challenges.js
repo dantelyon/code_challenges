@@ -6,6 +6,23 @@
 
 
 
+
+
+
+
+// Bouncing Balls //
+	function bouncingBall(heightDrop,  bounce,  momWindow) {
+		if (heightDrop<=0 || bounce<=0 || bounce>=1 || momWindow>=heightDrop) return -1
+		let lectures_by_mom = 1
+		let uhOh = heightDrop * bounce
+		while (uhOh > momWindow){
+			lectures_by_mom += 2;
+			uhOh *= bounce;
+		}
+		return lectures_by_mom
+	}
+
+
 // Detect Pangram //
 	function isPangram(string){
 		string = string.toLowerCase()
