@@ -7,7 +7,18 @@
 
 
 
-
+// Build Tower //
+	function towerBuilder(nFloors) {
+		let tower = new Array()
+		for (let i = 1, blocks = 1; i < nFloors+1; i++, blocks += 2){
+			let floor = new String()
+			floor += " ".repeat(nFloors-i)
+			floor += "*".repeat(blocks)
+			floor += " ".repeat(nFloors-i)
+			tower.push(floor)
+		}
+		return tower
+	}
 
 
 // Bouncing Balls //
