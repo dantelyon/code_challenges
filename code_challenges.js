@@ -5,6 +5,10 @@
 
 
 
+// Write Number in Expanded Form //
+	function expandedForm(num) {
+		return num.toString().split("").reverse().map((n,i) => n*10**i).filter(n => n!=0).reverse().join(" + ")
+	}
 
 
 // Build Tower //
