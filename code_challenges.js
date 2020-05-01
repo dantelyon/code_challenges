@@ -5,6 +5,18 @@
 
 
 
+// Highest Scoring Word //
+	function high(x){
+		const words = x.split(" ")
+		const wordScores = words.map(word => {
+			let wordScore = 0;
+			for (let letter of word) wordScore += letter.charCodeAt(0) - 96;
+			return wordScore
+		})
+		return words[wordScores.indexOf(Math.max(...wordScores))]
+	}
+
+
 // Write Number in Expanded Form //
 	function expandedForm(num) {
 		return num.toString().split("").reverse().map((n,i) => n*10**i).filter(n => n!=0).reverse().join(" + ")
