@@ -2,7 +2,12 @@
 
 
 
-
+// Does my number look big in this? //
+	function narcissistic(value) {
+		let digits = value.toString().split("")
+		let raisedSum = digits.map(n => n ** digits.length).reduce((acc, cv) => acc + cv)
+		return value === raisedSum
+	}
 
 
 // Highest Scoring Word //
