@@ -2,6 +2,38 @@
 
 
 
+
+
+
+
+
+
+
+// Sum without highest and lowest number //
+	function sumArray(array) {
+	  if (!array || array.length <= 1) return 0;
+	  const sum = array.reduce((a, c) => a + c, 0);
+	  return sum - (Math.min(...array) + Math.max(...array));
+	}
+
+
+// Polish alphabet //
+	function correctPolishLetters (string) {
+	  const polish_alphabet = {
+	    "ą" : "a",
+	    "ć" : "c",
+	    "ę" : "e",
+	    "ł" : "l",
+	    "ń" : "n",
+	    "ó" : "o",
+	    "ś" : "s",
+	    "ź" : "z",
+	    "ż" : "z",
+	  }
+	  return string.split("").map(letter => polish_alphabet[letter] || letter).join("")
+	}
+
+
 // Does my number look big in this? //
 	function narcissistic(value) {
 		let digits = value.toString().split("")
