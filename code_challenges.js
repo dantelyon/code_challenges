@@ -6,7 +6,19 @@
 
 
 
-
+// Delete occurrences of an element if it occurs more than n times //
+	function deleteNth(arr, n){
+	  for (let setNumber of new Set(arr)){
+	  	let count = 0;
+	  	for (let i = 0; i < arr.length; i++){
+	  		if (setNumber == arr[i]){
+	  			if (count >= n) arr[i] = null;
+	  			count++;
+	  		}
+	  	}
+	  }
+	  return arr.filter(n => n)
+	}
 
 
 // Sum without highest and lowest number //
