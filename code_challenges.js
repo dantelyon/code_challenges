@@ -6,6 +6,22 @@
 
 
 
+// Reversing a Process //
+// This one was a real struggle. I think I'll go take a nap now...
+	function decode(encoded_string) {
+		let encoding_number = encoded_string.match(/\d/g).join("");
+		let encoded_chars = encoded_string.match(/[a-zA-Z]+/g).join("").toLowerCase().split("");
+		let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+		let encoding_possible = true;
+		let encoded = {};
+		alphabet.forEach((char, i) => {
+			if (encoded[alphabet[i * encoding_number % 26]]) encoding_possible = false;
+			else encoded[alphabet[i * encoding_number % 26]] = char;
+		})
+		return encoding_possible ? encoded_chars.map(char => encoded[char]).join("") : "Impossible to decode"
+	}
+
+
 // Delete occurrences of an element if it occurs more than n times //
 	function deleteNth(arr, n){
 	  for (let setNumber of new Set(arr)){
