@@ -4,7 +4,16 @@
 
 
 
-
+// Write a function that takes in a string, and calls console.log for every character in the string, 1 second after each call.
+function solution(string) {
+	(function printLetter(n){
+		setTimeout(() => {
+			console.log(string[n]);
+			n++;
+			if (n < string.length) printLetter(n);
+		}, 1000)
+	})(0)
+}
 
 // Reversing a Process //
 // This one was a real struggle. I think I'll go take a nap now...
