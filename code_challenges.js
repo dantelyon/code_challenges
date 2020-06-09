@@ -4,16 +4,29 @@
 
 
 
+
+// IP Validation
+	function isValidIP(str) {
+		let IP_array = str.split(".")
+		let valid = IP_array.length == 4
+		for (let value of IP_array) {
+	    	if (/^\d+$/.test(value) == false) valid = false;
+			else if (value > 255) valid = false;
+			else if (value[0] == "0" && value.length > 1) valid = false;
+		}
+		return valid
+	}
+
 // Write a function that takes in a string, and calls console.log for every character in the string, 1 second after each call.
-function solution(string) {
-	(function printLetter(n){
-		setTimeout(() => {
-			console.log(string[n]);
-			n++;
-			if (n < string.length) printLetter(n);
-		}, 1000)
-	})(0)
-}
+	function solution(string) {
+		(function printLetter(n){
+			setTimeout(() => {
+				console.log(string[n]);
+				n++;
+				if (n < string.length) printLetter(n);
+			}, 1000)
+		})(0)
+	}
 
 // Reversing a Process //
 // This one was a real struggle. I think I'll go take a nap now...
