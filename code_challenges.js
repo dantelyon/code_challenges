@@ -10,7 +10,7 @@
 		let IP_array = str.split(".")
 		let valid = IP_array.length == 4
 		for (let value of IP_array) {
-	    	if (/^\d+$/.test(value) == false) valid = false;
+	    		if (/^\d+$/.test(value) == false) valid = false;
 			else if (value > 255) valid = false;
 			else if (value[0] == "0" && value.length > 1) valid = false;
 		}
